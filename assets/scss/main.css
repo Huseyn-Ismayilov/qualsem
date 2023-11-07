@@ -9,6 +9,7 @@
 
 body {
   background-color: var(--body-color);
+  color: white;
   font-family: "Nunito sans", sans-serif;
 }
 
@@ -117,7 +118,11 @@ img {
   color: white;
   border: 1px solid var(--grey);
 }
+.btn.primary_btn {
+  background-color: transparent;
+}
 .btn.primary_btn:hover {
+  background-color: #2C2C2C;
   gap: 24px;
   box-shadow: 0px 8px 55px 0px rgba(0, 0, 0, 0.25);
 }
@@ -1020,4 +1025,49 @@ button.swiper-pagination-bullet {
 }
 .medical {
   padding: 260px 0 200px;
+  position: relative;
+}
+.medical::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  aspect-ratio: 2/1;
+  width: 100%;
+  max-width: 1086px;
+  background-image: url("data:image/svg+xml,%3Csvg width='1086' height='525' viewBox='0 0 1086 525' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.5' d='M1086 263H970.5L914 1L828 433L731.5 263H446.5L381.5 523L174 49L73.5 340.5H0' stroke='url(%23paint0_linear_335_4400)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_335_4400' x1='31.5' y1='212.5' x2='983' y2='523' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='white'/%3E%3Cstop offset='0.270833' stop-color='white' stop-opacity='0.25'/%3E%3Cstop offset='0.71875' stop-color='white' stop-opacity='0.25'/%3E%3Cstop offset='1' stop-color='white'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+.medical > * {
+  position: relative;
+  z-index: 1;
+}
+.medical .col {
+  width: 50%;
+}
+.medical .content .text {
+  background-color: #2c2c2c;
+  border-radius: 20px;
+  padding: 25px 49px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+.medical .content h3 {
+  font-size: 48px;
+  font-weight: 700;
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.4) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.medical .content h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 80px;
+}
+.medical .content p {
+  font-size: 32px;
+  font-weight: 400;
+  color: #808080;
 }/*# sourceMappingURL=main.css.map */
