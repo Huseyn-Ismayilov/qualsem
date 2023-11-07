@@ -153,6 +153,10 @@
         display: none;
     }
     .site_header {
+
+        .wrapper {
+            flex-wrap: nowrap;
+        }
         .toggle {
             display: none;
         }
@@ -162,7 +166,7 @@
     .site_header {
         .site_logo {
             margin-right: auto;
-            display: block;
+            width: 110px;
         }
         .navbar {
             display: none;

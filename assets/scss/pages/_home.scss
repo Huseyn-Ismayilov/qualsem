@@ -102,6 +102,7 @@
         }
         .wrapper {
             position: relative;
+            height: 500px;
             &::before {
                 content: "";
                 left: 50%;
@@ -118,8 +119,30 @@
             }
         }
         .content {
+            .logo{
+                max-width: 300px;
+            }
             .icon {
                 display: none;
+            }
+        }
+        .category_items {
+            flex-wrap: wrap;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: map.get($grid-breakpoints, "md")) {
+    .hero {
+        .category_items {
+            .btn {
+                font-size: 14px;
+                svg {
+                    height: 16px;
+                    width: auto;
+                }
             }
         }
     }
@@ -139,6 +162,7 @@
                 top: 44%;
             }
         }
+
     }
 }
 .medical {

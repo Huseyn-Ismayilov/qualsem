@@ -28,9 +28,9 @@
         }
     }
 }
-// @media (max-width: map.get($grid-breakpoints, "lg")){
-//     .btn {
-//         padding: 7px 20px;
-//         width: map-get($grid-breakpoints, md);
-//     }
-// }
+@media (max-width: map.get($grid-breakpoints, "md")){
+    .btn {
+        font-size: 14px;
+        padding: 6px 14px;
+    }
+}
