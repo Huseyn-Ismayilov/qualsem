@@ -223,3 +223,12 @@
         }
     }
 }
+@media (max-width: map.get($grid-breakpoints, "md")) {
+    .medical {
+        .content {
+            h1 {
+                font-size: 24px;
+            }
+        }
+    }
+}

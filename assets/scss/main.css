@@ -813,6 +813,14 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
+.sec_title .text_xl {
+  font-size: 64px;
+  font-weight: 700;
+}
+.sec_title .text_lg {
+  font-size: 48px;
+  font-weight: 600;
+}
 .sec_title .flex {
   display: flex;
   align-items: center;
@@ -1190,5 +1198,10 @@ button.swiper-pagination-bullet {
 @media (max-width: 992px) {
   .medical .col {
     width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .medical .content h1 {
+    font-size: 24px;
   }
 }/*# sourceMappingURL=main.css.map */
