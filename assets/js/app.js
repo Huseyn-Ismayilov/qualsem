@@ -12,7 +12,7 @@ $(window).scroll(function () {
 
 $('.site_header .toggle, .mobile_menu .close_btn').click(function () {
 	$('.mobile_menu').toggleClass('opened');
-	$('.nav_menu').toggleClass('opened');
+	$('body').toggleClass('overflow_hidden');
 	$('.site_header .toggle').toggleClass('opened')
 });
 

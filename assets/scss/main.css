@@ -830,15 +830,12 @@ button.swiper-pagination-bullet {
 .site_header.scroll_down {
   top: 16px;
 }
-.site_header.scroll_down .wrapper {
-  background: linear-gradient(180deg, rgb(25, 25, 25) 0%, rgb(29, 29, 29) 100%);
-}
 .site_header .wrapper {
   align-items: center;
   width: 100%;
   max-width: 1180px;
   margin: 0 auto;
-  background: var(--grey-linear);
+  background: linear-gradient(180deg, #131313 0%, #1F1F1F 100%);
   border: 1px solid rgba(255, 255, 255, 0.116);
   border-radius: 20px;
   padding: 24px 40px;
@@ -916,7 +913,45 @@ button.swiper-pagination-bullet {
   margin-top: -5px;
 }
 
+.mobile_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 90;
+  background-color: #121212;
+}
+.mobile_menu .navbar {
+  text-align: center;
+}
+.mobile_menu .navbar .nav_item:not(:last-child) {
+  margin-bottom: 16px;
+}
+.mobile_menu .navbar .nav_link {
+  font-size: 40px;
+  font-weight: 600;
+  color: #707070;
+  padding: 5px 28px;
+  border: 1px solid transparent;
+  border-radius: 99px;
+  display: inline-block;
+}
+.mobile_menu .navbar .nav_item.active .nav_link {
+  background: radial-gradient(35.14% 106.49% at 50% 50%, #fff 0%, rgba(255, 255, 255, 0.6) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-color: #707070;
+}
+
 @media (min-width: 992px) {
+  .mobile_menu {
+    display: none;
+  }
   .site_header .toggle {
     display: none;
   }
@@ -926,12 +961,16 @@ button.swiper-pagination-bullet {
     margin-right: auto;
     display: block;
   }
+  .site_header .navbar {
+    display: none;
+  }
 }
 .hero {
   padding-top: 100px;
   margin-top: -50px;
   text-align: center;
   position: relative;
+  overflow: hidden;
 }
 .hero > * {
   position: relative;
@@ -1070,4 +1109,10 @@ button.swiper-pagination-bullet {
   font-size: 32px;
   font-weight: 400;
   color: #808080;
+}
+
+@media (max-width: 992px) {
+  .medical .col {
+    width: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */

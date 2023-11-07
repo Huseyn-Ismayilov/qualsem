@@ -3,6 +3,7 @@
     margin-top: -50px;
     text-align: center;
     position: relative;
+    overflow: hidden;
     > * {
         position: relative;
         z-index: 1;
@@ -151,3 +152,12 @@
         }
     }
 }
+
+@media (max-width: map.get($grid-breakpoints, "lg")) {
+    .medical {
+        .col {
+            width: 100%;
+        }
+    }
+}
+
