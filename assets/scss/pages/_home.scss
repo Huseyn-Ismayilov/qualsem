@@ -81,6 +81,7 @@
         }
     }
     .category_items {
+        margin-top: 44px;
         display: flex;
         justify-content: center;
         gap: 24px;
@@ -89,4 +90,17 @@
             white-space: nowrap;
         }
     }
+}
+@media (max-width: map.get($grid-breakpoints, "lg")) {
+    .hero {
+        .content {
+            .icon {
+                display: none;
+            }
+        }
+    }
+}
+
+.medical{
+    padding: 260px 0 200px;
 }
