@@ -835,7 +835,7 @@ button.swiper-pagination-bullet {
   width: 100%;
   max-width: 1180px;
   margin: 0 auto;
-  background: linear-gradient(180deg, #131313 0%, #1F1F1F 100%);
+  background: linear-gradient(180deg, #131313 0%, #1f1f1f 100%);
   border: 1px solid rgba(255, 255, 255, 0.116);
   border-radius: 20px;
   padding: 24px 40px;
@@ -924,6 +924,9 @@ button.swiper-pagination-bullet {
   justify-content: center;
   z-index: 90;
   background-color: #121212;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .mobile_menu .navbar {
   text-align: center;
@@ -964,9 +967,19 @@ button.swiper-pagination-bullet {
   .site_header .navbar {
     display: none;
   }
+  .mobile_menu.opened {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+@media (max-width: 576px) {
+  .site_header .wrapper {
+    padding: 14px 30px;
+  }
 }
 .hero {
-  padding-top: 100px;
+  padding: 100px 0 150px;
   margin-top: -50px;
   text-align: center;
   position: relative;
@@ -1002,6 +1015,7 @@ button.swiper-pagination-bullet {
 }
 .hero .content .logo {
   display: inline-block;
+  margin-bottom: 52px;
 }
 .hero .content h3 {
   font-size: 32px;
@@ -1058,8 +1072,42 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 992px) {
+  .hero {
+    padding-bottom: 0;
+  }
+  .hero::after, .hero::before {
+    display: none;
+  }
+  .hero .wrapper {
+    position: relative;
+  }
+  .hero .wrapper::before {
+    content: "";
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 621px;
+    aspect-ratio: 1/1;
+    background-image: url(../images/plus.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+  }
   .hero .content .icon {
     display: none;
+  }
+}
+@media (max-width: 576px) {
+  .hero .content h1 {
+    margin-bottom: 24px;
+  }
+  .hero .content h3 {
+    font-size: 16px;
+  }
+  .hero .wrapper::before {
+    top: 44%;
   }
 }
 .medical {

@@ -1,5 +1,5 @@
 .hero {
-    padding-top: 100px;
+    padding: 100px 0 150px;
     margin-top: -50px;
     text-align: center;
     position: relative;
@@ -36,6 +36,7 @@
     .content {
         .logo {
             display: inline-block;
+            margin-bottom: 52px;
         }
         h3 {
             font-size: 32px;
@@ -94,6 +95,28 @@
 }
 @media (max-width: map.get($grid-breakpoints, "lg")) {
     .hero {
+        padding-bottom: 0;
+        &::after,
+        &::before {
+            display: none;
+        }
+        .wrapper {
+            position: relative;
+            &::before {
+                content: "";
+                left: 50%;
+                top: 40%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                max-width: 621px;
+                aspect-ratio: 1/1;
+                background-image: url(../images/plus.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                position: absolute;
+            }
+        }
         .content {
             .icon {
                 display: none;
@@ -101,7 +124,23 @@
         }
     }
 }
-
+@media (max-width: map.get($grid-breakpoints, "sm")) {
+    .hero {
+        .content {
+            h1 {
+                margin-bottom: 24px;
+            }
+            h3 {
+                font-size: 16px;
+            }
+        }
+        .wrapper {
+            &::before {
+                top: 44%;
+            }
+        }
+    }
+}
 .medical {
     padding: 260px 0 200px;
     position: relative;
@@ -160,4 +199,3 @@
         }
     }
 }
-

@@ -12,7 +12,7 @@
         width: 100%;
         max-width: 1180px;
         margin: 0 auto;
-        background: linear-gradient(180deg, #131313 0%, #1F1F1F 100%);
+        background: linear-gradient(180deg, #131313 0%, #1f1f1f 100%);
         border: 1px solid rgba(255, 255, 255, 0.116);
         border-radius: 20px;
         padding: 24px 40px;
@@ -114,6 +114,11 @@
     justify-content: center;
     z-index: 90;
     background-color: #121212;
+    opacity: 0;
+    visibility: hidden;
+    // transform: scale(0.7);
+    // transform-origin: top center;
+    transition: 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     .navbar {
         text-align: center;
         .nav_item {
@@ -161,6 +166,20 @@
         }
         .navbar {
             display: none;
+        }
+    }
+    .mobile_menu {
+        &.opened {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+    }
+}
+@media (max-width: map.get($grid-breakpoints, "sm")) {
+    .site_header {
+        .wrapper {
+            padding: 14px 30px;
         }
     }
 }
