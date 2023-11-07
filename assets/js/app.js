@@ -1,7 +1,7 @@
 $(window).scroll(function () {
 	var scroll = $(window).scrollTop();
 
-	if (scroll >= 60) {
+	if (scroll >= 10) {
 		$(".site_header").addClass("scroll_down");
 	} else {
 		$(".site_header").removeClass("scroll_down");

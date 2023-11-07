@@ -7,8 +7,8 @@
 }
 
 body {
-    font-weight: 400;
-    font-family: 'Poppins', sans-serif;
+    background-color: var(--body-color);
+    font-family: "Nunito sans", sans-serif;
 }
 
 body.overflow_hidden {
@@ -40,17 +40,11 @@ li {
 u {
     text-decoration: underline;
 }
-
-a {
-    cursor: pointer;
-    text-decoration: none;
-    transition: 0.2s;
-    color: currentColor;
-}
+a,
 
 button {
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.3s ease;
     background-color: transparent;
     border: unset;
 }
@@ -63,10 +57,4 @@ img {
 .wrapper {
     display: flex;
     flex-wrap: wrap;
-}
-
-
-h1 {
-    font-size: 36px;
-    font-weight: 600;
 }

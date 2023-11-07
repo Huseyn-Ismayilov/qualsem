@@ -1,101 +1,52 @@
-.top_header {
-    position: relative;
-    z-index: 99;
-    color: white;
-    padding: 10px 0;
-    .wrapper {
-        justify-content: flex-end;
-        align-items: center;
-    }
-    .top_links {
-        display: flex;
-        align-items: center;
-        a {
-            padding: 5px 12px;
-            text-transform: uppercase;
-            font-size: 12px;
-            font-weight: 600;
-        }
-    }
-    .select_language {
-        position: relative;
-        .btn {
-            gap: 10px;
-            cursor: pointer;
-            span {
-                font-size: 12px;
-                font-weight: 600;
-            }
-            &.active {
-                .arrow {
-                    transform: rotate(180deg);
-                }   
-            }
-            .arrow {
-                svg {
-                    display: block;
-                    transition: .1s;
-                }
-            }
-        }
-        .flag {
-            width: 30px;
-            img {
-                width: 100%;
-            }
-        }
-        .dropdown {
-            display: none;
-            position: absolute;
-            top: 100%;
-            right: 30px;
-            background-color: white;
-            color: var(--base-color);
-            padding: 5px;
-            border-radius: 10px;
-            z-index: 99;
-            a {
-                display: block;
-                padding: 5px 10px;
-            }
-        }
-    }
-}
 .site_header {
     position: sticky;
-    top: 0;
+    top: 30px;
     left: 0;
+    transition: 0.1s;
     z-index: 98;
-    transition: .1s;
-    padding: 10px 0;
     &.scroll_down {
-        background-color: var(--base-color);
-        top: 0;
+        top: 16px;
+        .wrapper {
+            background: linear-gradient(180deg, rgb(25 25 25) 0%, rgb(29 29 29) 100%);
+        }
     }
     .wrapper {
         align-items: center;
+        width: 100%;
+        max-width: 1180px;
+        margin: 0 auto;
+        background: var(--grey-linear);
+        border: 1px solid rgba(255, 255, 255, 0.116);
+        border-radius: 20px;
+        padding: 24px 40px;
     }
     .site_logo {
         display: block;
-        width: 180px;
+        width: 152px;
     }
     .navbar {
         display: flex;
         align-items: center;
-        margin-left: 49px;
+        justify-content: space-between;
+        flex-grow: 1;
+        margin-left: 40px;
         .nav_link {
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            padding: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: white;
+            font-size: 20px;
+            font-weight: 400;
+            padding: 10px;
+            color: #bdbdbd;
+            &:hover {
+                color: white;
+            }
         }
-    }
-    .guide_btn {
-        margin-left: auto;
+        .nav_item {
+            &.active {
+                .nav_link {
+                    font-weight: 700;
+                    color: white;
+                }
+            }
+        }
     }
 }
 .toggle {
@@ -121,7 +72,7 @@
         height: 2px;
         margin: 3px 0;
         transform: none;
-        transition: .2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
 
         &::before {
             content: "";
@@ -143,10 +94,9 @@
             &:nth-child(1) {
                 transform: rotate(45deg);
                 margin-bottom: -5px;
-                &::before{
+                &::before {
                     width: 100%;
                 }
-
             }
 
             &:nth-child(3) {
@@ -156,7 +106,6 @@
         }
     }
 }
-
 
 @media (min-width: map.get($grid-breakpoints, "lg")) {
     .site_header {

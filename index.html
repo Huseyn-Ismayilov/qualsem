@@ -5,50 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cambridge It Security</title>
+    <title>Qualsem</title>
     <link rel="stylesheet" href="./assets/scss/main.css">
 </head>
 
 <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="location" viewBox="0 0 20 20">
-            <path
-                d="M14.7142 13.8807C13.9867 14.6083 12.5191 16.0758 11.4136 17.1813C10.6325 17.9624 9.36775 17.9623 8.5867 17.1813C7.50109 16.0957 6.06062 14.6552 5.28612 13.8807C2.68262 11.2772 2.68262 7.05612 5.28612 4.45262C7.88961 1.84913 12.1107 1.84913 14.7142 4.45262C17.3177 7.05612 17.3177 11.2772 14.7142 13.8807Z"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path
-                d="M12.5002 9.16667C12.5002 10.5474 11.3809 11.6667 10.0002 11.6667C8.61945 11.6667 7.50016 10.5474 7.50016 9.16667C7.50016 7.78596 8.61945 6.66667 10.0002 6.66667C11.3809 6.66667 12.5002 7.78596 12.5002 9.16667Z"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        </symbol>
-        <symbol viewBox="0 0 24 24">
-            <path d="M14 5L21 12M21 12L14 19M21 12L3 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-        </symbol>
-        <symbol id="star" viewBox="0 0 15 15">
-            <path
-                d="M6.54449 1.09555C6.83466 0.155474 8.16534 0.155474 8.45551 1.09555L9.41525 4.20477C9.54463 4.62393 9.93209 4.90983 10.3708 4.90983H13.5814C14.5376 4.90983 14.9484 6.12324 14.1888 6.70416L11.5047 8.75698C11.172 9.01138 11.0331 9.4461 11.1566 9.84625L12.1608 13.0996C12.448 14.03 11.3713 14.7804 10.5978 14.1888L8.10749 12.2843C7.74892 12.01 7.25108 12.01 6.89251 12.2843L4.40217 14.1888C3.62871 14.7804 2.55197 14.03 2.83916 13.0996L3.84337 9.84625C3.96689 9.4461 3.82799 9.01138 3.49535 8.75698L0.81116 6.70416C0.0515728 6.12324 0.462386 4.90983 1.41865 4.90983H4.62924C5.06791 4.90983 5.45537 4.62393 5.58475 4.20477L6.54449 1.09555Z"
-                fill="currentColor" />
-        </symbol>
-        <symbol id="heart" viewBox="0 0 21 21">
-            <path
-                d="M4.17745 5.+7652C2.71299 6.94099 2.71299 9.31536 4.17745 10.7798L10.5791 17.1815L16.9808 10.7798C18.4452 9.31536 18.4452 6.94099 16.9808 5.47652C15.5163 4.01206 13.1419 4.01206 11.6775 5.47652L10.5791 6.57492L9.48075 5.47652C8.01629 4.01206 5.64192 4.01206 4.17745 5.47652Z"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        </symbol>
-        <symbol id="chevron_right" viewBox="0 0 24 24">
-            <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-        </symbol>
-        <symbol id="chevron_left" viewBox="0 0 24 24">
-            <path d="M15 19L8 12L15 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-        </symbol>
-        <symbol id="chevron_down" viewBox="0 0 24 24">
-            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-        </symbol>
-        <symbol id="chevron_up" viewBox="0 0 24 24">
-            <path d="M5 15L12 8L19 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-        </symbol>
+        <svg id="arrow_right" viewBox="0 0 17 15" fill="none">
+            <path d="M16 7.5L1 7.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M9.9502 1.47566L16.0002 7.49966L9.9502 13.5247" stroke="white" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
         <!-- 
             usage
             <svg width="12" height="19">
@@ -56,8 +24,171 @@
             </svg>
          -->
     </svg>
+    <header class="site_header">
+        <div class="container">
+            <div class="wrapper">
+                <a href="" class="site_logo">
+                    <img src="./assets/images/logo.png" alt="">
+                </a>
+                <ul class="navbar">
+                    <li class="nav_item active">
+                        <a href="" class="nav_link">Anasayfa</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="" class="nav_link">Medikal</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="" class="nav_link">ARGE</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="" class="nav_link">İnsansız Sistemler</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="" class="nav_link">Endüstri</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="" class="nav_link">Danışmanlık</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="" class="nav_link">Bize Ulaşın</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
     <main>
-
+        <section class="hero">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="content">
+                        <div class="logo">
+                            <img src="./assets/images/logo-text.svg" alt="">
+                        </div>
+                        <h3>Quality Software Electronic and Mechanical</h3>
+                        <div class="icons">
+                            <div class="icon icon1">
+                                <img src="./assets/images/hero-icon1.png" alt="">
+                            </div>
+                            <div class="icon icon2">
+                                <img src="./assets/images/hero-icon2.png" alt="">
+                            </div>
+                            <div class="icon icon3">
+                                <img src="./assets/images/hero-icon3.png" alt="">
+                            </div>
+                            <div class="icon icon4">
+                                <img src="./assets/images/hero-icon4.png" alt="">
+                            </div>
+                            <div class="icon icon5">
+                                <img src="./assets/images/hero-icon5.png" alt="">
+                            </div>
+                            <div class="icon icon6">
+                                <img src="./assets/images/hero-icon6.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="category_items">
+                    <li>
+                        <a href="" class="btn secondary_btn">
+                            <svg width="39" height="28" viewBox="0 0 39 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.75 28C7.29167 28 6.05208 27.4896 5.03125 26.4688C4.01042 25.4479 3.5 24.2083 3.5 22.75H0V3.5C0 2.5375 0.342708 1.71354 1.02813 1.02813C1.71354 0.342708 2.5375 0 3.5 0H28V7H33.25L38.5 14V22.75H35C35 24.2083 34.4896 25.4479 33.4688 26.4688C32.4479 27.4896 31.2083 28 29.75 28C28.2917 28 27.0521 27.4896 26.0312 26.4688C25.0104 25.4479 24.5 24.2083 24.5 22.75H14C14 24.2083 13.4896 25.4479 12.4688 26.4688C11.4479 27.4896 10.2083 28 8.75 28ZM8.75 24.5C9.24583 24.5 9.66146 24.3323 9.99687 23.9969C10.3323 23.6615 10.5 23.2458 10.5 22.75C10.5 22.2542 10.3323 21.8385 9.99687 21.5031C9.66146 21.1677 9.24583 21 8.75 21C8.25417 21 7.83854 21.1677 7.50312 21.5031C7.16771 21.8385 7 22.2542 7 22.75C7 23.2458 7.16771 23.6615 7.50312 23.9969C7.83854 24.3323 8.25417 24.5 8.75 24.5ZM3.5 19.25H4.9C5.39583 18.725 5.96458 18.3021 6.60625 17.9813C7.24792 17.6604 7.9625 17.5 8.75 17.5C9.5375 17.5 10.2521 17.6604 10.8938 17.9813C11.5354 18.3021 12.1042 18.725 12.6 19.25H24.5V3.5H3.5V19.25ZM29.75 24.5C30.2458 24.5 30.6615 24.3323 30.9969 23.9969C31.3323 23.6615 31.5 23.2458 31.5 22.75C31.5 22.2542 31.3323 21.8385 30.9969 21.5031C30.6615 21.1677 30.2458 21 29.75 21C29.2542 21 28.8385 21.1677 28.5031 21.5031C28.1677 21.8385 28 22.2542 28 22.75C28 23.2458 28.1677 23.6615 28.5031 23.9969C28.8385 24.3323 29.2542 24.5 29.75 24.5ZM28 15.75H35.4375L31.5 10.5H28V15.75Z"
+                                    fill="white" />
+                            </svg>
+                            Lojistik & Ticaret
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="btn secondary_btn">
+                            <svg width="29" height="28" viewBox="0 0 29 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.21264 22.2874L1.06322 19.4713L2.75287 17.7816L6.77586 18.3448L13.0517 12.069L0.5 5.22989L2.75287 2.97701L18.1207 6.91954L24.4368 0.683908C24.8927 0.227969 25.4626 0 26.1466 0C26.8305 0 27.4004 0.227969 27.8563 0.683908C28.3123 1.13985 28.5402 1.70977 28.5402 2.39368C28.5402 3.07759 28.3123 3.64751 27.8563 4.10345L21.5805 10.3793L25.523 25.7471L23.2701 28L16.431 15.4483L10.1552 21.7241L10.7184 25.7471L9.02874 27.4368L6.21264 22.2874Z"
+                                    fill="white" />
+                            </svg>
+                            İnsansız Sistemler
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="btn secondary_btn">
+                            <svg width="29" height="28" viewBox="0 0 29 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.34022 28C2.57022 28 1.91106 27.7258 1.36272 27.1775C0.814389 26.6292 0.540222 25.97 0.540222 25.2V8.4C0.540222 7.63 0.814389 6.97083 1.36272 6.4225C1.91106 5.87417 2.57022 5.6 3.34022 5.6H8.94022V2.8C8.94022 2.03 9.21439 1.37083 9.76272 0.8225C10.3111 0.274167 10.9702 0 11.7402 0H17.3402C18.1102 0 18.7694 0.274167 19.3177 0.8225C19.8661 1.37083 20.1402 2.03 20.1402 2.8V5.6H25.7402C26.5102 5.6 27.1694 5.87417 27.7177 6.4225C28.2661 6.97083 28.5402 7.63 28.5402 8.4V25.2C28.5402 25.97 28.2661 26.6292 27.7177 27.1775C27.1694 27.7258 26.5102 28 25.7402 28H3.34022ZM3.34022 25.2H25.7402V8.4H3.34022V25.2ZM11.7402 5.6H17.3402V2.8H11.7402V5.6ZM13.1402 18.2V22.4H15.9402V18.2H20.1402V15.4H15.9402V11.2H13.1402V15.4H8.94022V18.2H13.1402Z"
+                                    fill="white" />
+                            </svg>
+                            Medikal
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="btn secondary_btn">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="12.7691" y="8.88362" width="7.23523" height="2.29409" rx="1.14705"
+                                    transform="rotate(45 12.7691 8.88362)" stroke="white" />
+                                <path
+                                    d="M8.00635 17.8472C7.81108 17.6519 7.81108 17.3354 8.00635 17.1401L12.7689 12.3776L14.391 13.9997L9.62852 18.7623C9.43325 18.9575 9.11667 18.9575 8.92141 18.7623L8.00635 17.8472Z"
+                                    stroke="white" />
+                                <path
+                                    d="M20.0434 5.67614C19.8617 5.4945 19.572 5.48005 19.3732 5.64271L14.0957 9.96065L16.8083 12.6732L21.1262 7.39574C21.2889 7.19693 21.2745 6.90721 21.0928 6.72557L20.0434 5.67614Z"
+                                    stroke="white" />
+                                <path
+                                    d="M3.62859 23.1402C3.50698 23.0186 3.50335 22.8225 3.62037 22.6965L8.11703 17.854L8.91478 18.6517L4.07223 23.1484C3.9462 23.2654 3.75019 23.2618 3.62859 23.1402Z"
+                                    stroke="white" stroke-width="0.5" />
+                                <path
+                                    d="M20.9216 5.84734L22.5438 4.22517C22.9343 3.83465 23.5675 3.83465 23.958 4.22517L24.8731 5.14024C25.2636 5.53076 25.2636 6.16393 24.8731 6.55445L23.0845 8.34299C22.694 8.73351 22.694 9.36668 23.0845 9.7572L23.4173 10.0899C23.8078 10.4805 24.441 10.4805 24.8315 10.0899L25.5802 9.34126"
+                                    stroke="white" />
+                            </svg>
+                            Arge
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="btn secondary_btn">
+                            <svg width="24" height="30" viewBox="0 0 24 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.32727 15V28.5C1.32727 28.7761 1.55113 29 1.82727 29H22.4636C22.7398 29 22.9636 28.7761 22.9636 28.5V8.99499C22.9636 8.54954 22.4251 8.32645 22.1101 8.64143L16.6051 14.1464C16.2901 14.4614 15.7515 14.2383 15.7515 13.7929V8.99498C15.7515 8.54953 15.2129 8.32645 14.898 8.64143L9.39294 14.1464C9.07796 14.4614 8.53939 14.2383 8.53939 13.7929V8.99498C8.53939 8.54953 8.00082 8.32645 7.68584 8.64143L5.99394 10.3333M1.32727 15V1.5C1.32727 1.22386 1.55113 1 1.82727 1H5.49394C5.77008 1 5.99394 1.22386 5.99394 1.5V10.3333M1.32727 15L5.99394 10.3333"
+                                    stroke="white" stroke-width="2" />
+                                <rect x="5.22122" y="19.7424" width="5.78788" height="2.39394" stroke="white" />
+                                <rect x="13.7061" y="19.7424" width="5.78788" height="2.39394" stroke="white" />
+                            </svg>
+                            Endüstri Çalışmaları
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="btn secondary_btn">
+                            <svg width="24" height="28" viewBox="0 0 24 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.86362 28C4.51029 28 3.35529 27.5217 2.39862 26.565C1.44196 25.6083 0.963623 24.4533 0.963623 23.1V4.9C0.963623 3.54667 1.44196 2.39167 2.39862 1.435C3.35529 0.478333 4.51029 0 5.86362 0H23.3636V21C22.7803 21 22.2845 21.2042 21.8761 21.6125C21.4678 22.0208 21.2636 22.5167 21.2636 23.1C21.2636 23.6833 21.4678 24.1792 21.8761 24.5875C22.2845 24.9958 22.7803 25.2 23.3636 25.2V28H5.86362ZM3.76362 18.655C4.09029 18.4917 4.42862 18.375 4.77862 18.305C5.12862 18.235 5.49029 18.2 5.86362 18.2H6.56362V2.8H5.86362C5.28029 2.8 4.78446 3.00417 4.37612 3.4125C3.96779 3.82083 3.76362 4.31667 3.76362 4.9V18.655ZM9.36362 18.2H20.5636V2.8H9.36362V18.2ZM5.86362 25.2H18.9186C18.7786 24.8733 18.6678 24.5408 18.5861 24.2025C18.5045 23.8642 18.4636 23.4967 18.4636 23.1C18.4636 22.7267 18.4986 22.365 18.5686 22.015C18.6386 21.665 18.7553 21.3267 18.9186 21H5.86362C5.25696 21 4.75529 21.2042 4.35862 21.6125C3.96196 22.0208 3.76362 22.5167 3.76362 23.1C3.76362 23.7067 3.96196 24.2083 4.35862 24.605C4.75529 25.0017 5.25696 25.2 5.86362 25.2Z"
+                                    fill="white" />
+                            </svg>
+                            Eğitim
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="medical">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="col">
+                        <div class="content">
+                            <div class="text">
+                                <h3>Medikal</h3>
+                                <a href="" class="btn primary_btn">
+                                    Şimdi İnceleyin
+                                    <svg width="17" height="15">
+                                        <use xlink:href="#arrow_right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="./assets/js/swiper-bundle.min.js"></script>
