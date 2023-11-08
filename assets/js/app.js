@@ -43,25 +43,33 @@ $('.select_language .btn').click(function () {
 });
 
 
-var mySwiper = new Swiper('.productFeatures .slider', {
-	loop: true,
-	initialSlide: 0,
-	watchSlidesProgress: true,
-	watchSlidesVisibility: true,
-	// pagination: {
-	// 	el: '.swiper-pagination',
-	// },
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-})
+// 
 
-function change() {
-	var offer = document.getElementById('numberSlides');
-	offer.innerHTML = (mySwiper.realIndex + 1) + '/' + (mySwiper.slides.length - 2) + 'Offers';
+function updSwiperNumericPagination() {
+	this.el.querySelector(".swiper-counter").innerHTML = '<span class="count">' + (this.realIndex + 1) + '</span>/<span class="total">' + this.el.slidesQuantity + "</span>";
 }
 
-change();
-document.getElementById(".productFeatures .prev_arrow").addEventListener("click", change);
-document.getElementById(".productFeatures .next_arrow").addEventListener("click", change); 
+$(".productFeatures .slider").each(function () {
+	// Getting slides quantity before slider clones them
+	this.slidesQuantity = this.querySelectorAll(".swiper-slide").length;
+
+	// Swiper initialization
+	new Swiper(this, {
+		speed: 800,
+		loop: false,
+		direction: 'vertical',
+		pagination: {
+			el: this.querySelector(".swiper-pagination")
+		},
+		navigation: {
+			nextEl: '.next_arrow',
+			prevEl: '.prev_arrow',
+		},
+		on: {
+			init: updSwiperNumericPagination,
+			slideChange: updSwiperNumericPagination
+		}
+	});
+});
+
+// End
