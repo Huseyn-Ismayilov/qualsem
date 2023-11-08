@@ -42,3 +42,26 @@ $('.select_language .btn').click(function () {
 	$(this).next().slideToggle()
 });
 
+
+var mySwiper = new Swiper('.productFeatures .slider', {
+	loop: true,
+	initialSlide: 0,
+	watchSlidesProgress: true,
+	watchSlidesVisibility: true,
+	// pagination: {
+	// 	el: '.swiper-pagination',
+	// },
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+})
+
+function change() {
+	var offer = document.getElementById('numberSlides');
+	offer.innerHTML = (mySwiper.realIndex + 1) + '/' + (mySwiper.slides.length - 2) + 'Offers';
+}
+
+change();
+document.getElementById(".productFeatures .prev_arrow").addEventListener("click", change);
+document.getElementById(".productFeatures .next_arrow").addEventListener("click", change); 

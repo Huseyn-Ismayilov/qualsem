@@ -1,7 +1,8 @@
 .site_header {
-    position: sticky;
+    position: fixed;
     top: 30px;
     left: 0;
+    width: 100%;
     transition: 0.1s;
     z-index: 98;
     &.scroll_down {
@@ -52,6 +53,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    height: 24px;
 
     .bars {
         display: flex;

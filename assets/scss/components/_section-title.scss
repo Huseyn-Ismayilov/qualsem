@@ -1,4 +1,9 @@
 .sec_title {
+    > * {
+        &:not(.flex) {
+            margin-bottom: 30px;
+        }
+    }
     .text_xl {
         font-size: 64px;
         font-weight: 700;
@@ -7,18 +12,49 @@
         font-size: 48px;
         font-weight: 600;
     }
+    .text_md {
+        font-size: 32px;
+        font-weight: 400;
+        color: var(--grey-300);
+    }
+    .btn {
+        margin-bottom: 76px;
+    }
+    .black_linear {
+        background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.4) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .green_linear {
+        background: linear-gradient(180deg, #c6f9e5 0%, #0c2222 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
     .flex {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-bottom: 1px solid currentColor;
+        > * {
+            margin-bottom: 0;
+        }
     }
 }
 @media (max-width: map.get($grid-breakpoints, "md")) {
     .sec_title {
         .flex {
-            flex-wrap: wrap;
             gap: 12px;
+        }
+        .text_xl {
+            font-size: 32px;
+        }
+        .text_lg {
+            font-size: 32px;
+        }
+        .text_md {
+            font-size: 16px;
         }
     }
 }
