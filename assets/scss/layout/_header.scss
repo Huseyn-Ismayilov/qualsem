@@ -7,13 +7,16 @@
     z-index: 98;
     &.scroll_down {
         top: 16px;
+        .wrapper {
+            backdrop-filter: blur(16px);
+        }
     }
     .wrapper {
         align-items: center;
         width: 100%;
         max-width: 1180px;
         margin: 0 auto;
-        background: linear-gradient(180deg, #131313 0%, #1f1f1f 100%);
+        background: linear-gradient(180deg, rgba(44, 44, 44, 0) 0%, rgba(44, 44, 44, 0.5) 100%);
         border: 1px solid rgba(255, 255, 255, 0.116);
         border-radius: 20px;
         padding: 24px 40px;
@@ -155,7 +158,6 @@
         display: none;
     }
     .site_header {
-
         .wrapper {
             flex-wrap: nowrap;
         }

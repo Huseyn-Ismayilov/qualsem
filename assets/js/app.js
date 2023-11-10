@@ -51,7 +51,7 @@ function updSwiperNumericPagination() {
 
 $(".productFeatures .slider").each(function () {
 	// Getting slides quantity before slider clones them
-	this.slidesQuantity = this.querySelectorAll(".swiper-slide").length;
+	this.slidesQuantity = this.querySelectorAll(".productFeatures .swiper-slide").length;
 
 	// Swiper initialization
 	new Swiper(this, {
@@ -59,11 +59,11 @@ $(".productFeatures .slider").each(function () {
 		loop: false,
 		direction: 'vertical',
 		pagination: {
-			el: this.querySelector(".swiper-pagination")
+			el: this.querySelector(".productFeatures .swiper-pagination")
 		},
 		navigation: {
-			nextEl: '.next_arrow',
-			prevEl: '.prev_arrow',
+			nextEl: '.productFeatures .next_arrow',
+			prevEl: '.productFeatures .prev_arrow',
 		},
 		on: {
 			init: updSwiperNumericPagination,
@@ -75,60 +75,40 @@ $(".productFeatures .slider").each(function () {
 // End
 
 
+if ($(window).width() < 991) {
+	$(".industry .slider").each(function () {
+		// Getting slides quantity before slider clones them
+		this.slidesQuantity = this.querySelectorAll(".swiper-slide").length;
 
-
-//Make the DIV element draggagle:
-// dragElement(document.getElementById("mydiv"));
-
-// function dragElement(elmnt) {
-//   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-//   if (document.getElementById(elmnt.id + "header")) {
-//     /* if present, the header is where you move the DIV from:*/
-//     document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-//   } else {
-//     /* otherwise, move the DIV from anywhere inside the DIV:*/
-//     elmnt.onmousedown = dragMouseDown;
-//   }
-
-//   function dragMouseDown(e) {
-//     e = e || window.event;
-//     e.preventDefault();
-//     // get the mouse cursor position at startup:
-//     pos3 = e.clientX;
-//     pos4 = e.clientY;
-//     document.onmouseup = closeDragElement;
-//     // call a function whenever the cursor moves:
-//     document.onmousemove = elementDrag;
-//   }
-
-//   function elementDrag(e) {
-//     e = e || window.event;
-//     e.preventDefault();
-//     // calculate the new cursor position:
-//     pos1 = pos3 - e.clientX;
-//     pos2 = pos4 - e.clientY;
-//     pos3 = e.clientX;
-//     pos4 = e.clientY;
-//     // set the element's new position:
-//     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-//     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-//   }
-
-//   function closeDragElement() {
-//     /* stop moving when mouse button is released:*/
-//     document.onmouseup = null;
-//     document.onmousemove = null;
-//   }
-// }
+		// Swiper initialization
+		new Swiper(this, {
+			speed: 800,
+			spaceBetween: 30,
+			pagination: {
+				el: this.querySelector(".industry .swiper-pagination")
+			},
+			navigation: {
+				nextEl: '.industry .next_arrow',
+				prevEl: '.industry .prev_arrow',
+			},
+			on: {
+				init: updSwiperNumericPagination,
+				slideChange: updSwiperNumericPagination
+			}
+		});
+	});
+}
 
 
 // 
 
 
-$(document).ready(function () {
-	$('.hero .icon').draggable();
+// $(document).ready(function () {
+// 	$('.hero .icon img').draggable();
+// });
+$(function () {
+	$(".hero .icon img").draggable();
 });
-
 
 //header animation on load
 $(document).ready(function () {
@@ -136,3 +116,5 @@ $(document).ready(function () {
 		$(".hero .icon").addClass("opened");
 	}, 0);
 });
+
+
