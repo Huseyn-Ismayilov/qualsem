@@ -1079,23 +1079,33 @@ button.swiper-pagination-bullet {
 }
 .hero .content .icon {
   position: absolute;
+  transform: rotate(180deg);
+  transition: 0.5s;
 }
 .hero .content .icon img {
   width: 100%;
   max-width: 200px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.hero .content .icon.opened {
+  transform: rotate(0);
 }
 .hero .content .icon1 {
   top: 5%;
   left: 8%;
+  transition-duration: 0.2s;
 }
 .hero .content .icon2 {
   top: 45%;
   left: 5%;
+  transition-duration: 0.4s;
 }
 .hero .content .icon3 {
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 40%;
+  transition-duration: 0.5s;
 }
 .hero .content .icon3 img {
   max-width: 250px;
@@ -1103,15 +1113,17 @@ button.swiper-pagination-bullet {
 .hero .content .icon4 {
   top: 10%;
   right: 5%;
+  transition-duration: 0.7s;
 }
 .hero .content .icon5 {
   top: 45%;
   right: 5%;
+  transition-duration: 0.9s;
 }
 .hero .content .icon6 {
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 40%;
+  transition-duration: 1s;
 }
 .hero .category_items {
   margin-top: 44px;
