@@ -57,7 +57,7 @@ $(".productFeatures .slider").each(function () {
 	new Swiper(this, {
 		speed: 800,
 		loop: false,
-		direction: 'vertical',
+		direction: 'horizontal',
 		pagination: {
 			el: this.querySelector(".productFeatures .swiper-pagination")
 		},
@@ -68,7 +68,20 @@ $(".productFeatures .slider").each(function () {
 		on: {
 			init: updSwiperNumericPagination,
 			slideChange: updSwiperNumericPagination
-		}
+		},
+		breakpoints: {
+			// 640: {
+			// 	slidesPerView: 2,
+			// 	spaceBetween: 20,
+			// },
+			// 768: {
+			// 	slidesPerView: 4,
+			// 	spaceBetween: 40,
+			// },
+			1024: {
+				direction: "vertical",
+			},
+		},
 	});
 });
 
@@ -76,7 +89,7 @@ $(".productFeatures .slider").each(function () {
 
 
 if ($(window).width() < 991) {
-	$(".industry .slider").each(function () {
+	$(".industry0 .slider").each(function () {
 		// Getting slides quantity before slider clones them
 		this.slidesQuantity = this.querySelectorAll(".swiper-slide").length;
 
@@ -85,11 +98,11 @@ if ($(window).width() < 991) {
 			speed: 800,
 			spaceBetween: 30,
 			pagination: {
-				el: this.querySelector(".industry .swiper-pagination")
+				el: this.querySelector(".industry0 .swiper-pagination")
 			},
 			navigation: {
-				nextEl: '.industry .next_arrow',
-				prevEl: '.industry .prev_arrow',
+				nextEl: '.industry0 .next_arrow',
+				prevEl: '.industry0 .prev_arrow',
 			},
 			on: {
 				init: updSwiperNumericPagination,
@@ -98,6 +111,9 @@ if ($(window).width() < 991) {
 		});
 	});
 }
+
+// 
+
 
 
 // 
@@ -118,3 +134,67 @@ $(document).ready(function () {
 });
 
 
+
+var medical_intro = new Swiper(".medical_intro .slider", {
+	slidesPerView: "auto",
+	spaceBetween: 30,
+	loop: true,
+});
+
+
+// var arge_content_block = new Swiper(".arge_content_block .slider", {
+// 	slidesPerView: 4,
+// 	centeredSlides: true,
+// 	spaceBetween: 30,
+// 	freeMode: true,
+// 	loop: true,
+// })
+
+new Swiper('.arge_content_block .slider', {
+	spaceBetween: 20,
+	// centeredSlides: true,
+	loop: true,
+	direction: "vertical",
+	slidesPerView: "auto",
+	breakpoints: {
+		// 640: {
+		// 	slidesPerView: 2,
+		// 	spaceBetween: 20,
+		// },
+		// 768: {
+		// 	slidesPerView: 4,
+		// 	spaceBetween: 40,
+		// },
+		1024: {
+			slidesPerView: 4,
+			spaceBetween: 50,
+			freeMode: true,
+			direction: "horizontal",
+		},
+	},
+});
+
+
+
+$(".industry_intro .slider").each(function () {
+	// Getting slides quantity before slider clones them
+	this.slidesQuantity = this.querySelectorAll(".swiper-slide").length;
+
+	// Swiper initialization
+	new Swiper(this, {
+		speed: 800,
+		loop: false,
+		spaceBetween: 150,
+		pagination: {
+			el: this.querySelector(".industry_intro .swiper-pagination")
+		},
+		navigation: {
+			nextEl: '.industry_intro .next_arrow',
+			prevEl: '.industry_intro .prev_arrow',
+		},
+		on: {
+			init: updSwiperNumericPagination,
+			slideChange: updSwiperNumericPagination
+		}
+	});
+});

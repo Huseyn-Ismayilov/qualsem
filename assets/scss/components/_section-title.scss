@@ -1,8 +1,13 @@
 .sec_title {
     > * {
-        &:not(.flex) {
+        &:not(.flex):not(.container):not(.btn) {
             margin-bottom: 30px;
+            display: inline-block;
         }
+    }
+    .text_2xl {
+        font-size: 96px;
+        font-weight: 700;
     }
     .text_xl {
         font-size: 64px;
@@ -32,7 +37,12 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+    .white_linear {
+        background: radial-gradient(35.14% 106.49% at 50% 50%, #fff 0%, rgba(255, 255, 255, 0.6) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
     .flex {
         display: flex;
         align-items: center;
@@ -51,10 +61,13 @@
             font-size: 32px;
         }
         .text_lg {
-            font-size: 32px;
+            font-size: 24px;
         }
         .text_md {
             font-size: 16px;
+        }
+        .text_2xl {
+            font-size: 48px;
         }
     }
 }
