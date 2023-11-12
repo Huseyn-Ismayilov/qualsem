@@ -48,13 +48,18 @@
     }
     .icons {
         &.opened {
+            .icon {
+                opacity: 1;
+            }
             .icon1 {
                 left: 8%;
             }
             .icon2 {
                 top: 45%;
+                left: 5%;
             }
             .icon3 {
+                top: -5%;
                 left: 40%;
             }
             .icon4 {
@@ -66,12 +71,14 @@
             }
             .icon6 {
                 left: 40%;
+                bottom: 0%;
             }
         }
         .icon {
             position: absolute;
             // transform: rotate(360deg);
-            transition: 1s;
+            opacity: 0;
+            transition: .4s ease;
 
             img {
                 width: 100%;
@@ -82,36 +89,36 @@
         }
         .icon1 {
             top: 5%;
-            left: 32%;
+            left: 42%;
             // transition-duration: 0.2s;
         }
         .icon2 {
-            top: 32%;
-            left: 5%;
+            top: 24%;
+            left: 9%;
             // transition-duration: 0.4s;
         }
         .icon3 {
-            top: 0;
-            left: 62%;
+            top: 1%;
+            left: 73%;
             // transition-duration: 0.5s;
             img {
                 max-width: 250px;
             }
         }
         .icon4 {
-            top: 31%;
+            top: 44%;
             right: 5%;
             // transition-duration: 0.7s;
         }
         .icon5 {
             top: 68%;
-            right: 24%;
+            right: 40%;
 
             // transition-duration: 0.9s;
         }
         .icon6 {
-            bottom: 0;
-            left: 23%;
+            bottom: 18%;
+            left: 18%;
             // transition-duration: 1s;
         }
     }
