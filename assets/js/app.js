@@ -129,8 +129,10 @@ $(function () {
 //header animation on load
 $(document).ready(function () {
 	setTimeout(function () {
-		$(".hero .icon").addClass("opened");
-	}, 0);
+		$(".hero .icons").addClass("opened");
+		$(".hero .logo").slideDown()
+		$(".hero .content h3").slideDown()
+	}, 150);
 });
 
 
