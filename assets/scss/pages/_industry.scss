@@ -93,11 +93,13 @@
     }
     > .container {
         > .sec_title {
-            margin-bottom: -100px;
+            margin-bottom: -200px;
         }
     }
     .image {
         margin-bottom: 0;
+        min-width: 170%;
+        margin-left: -100%;
     }
     // .image {
     //     min-width: 162%;

@@ -200,3 +200,16 @@ $(".industry_intro .slider").each(function () {
 		}
 	});
 });
+
+
+new Swiper('.arge_intro .slider', {
+	slidesPerView: "auto",
+	freeMode: true,
+	spaceBetween: 20,
+	loop: true,
+	breakpoints: {
+		1024: {
+			spaceBetween: 50,
+		},
+	},
+});

@@ -1,13 +1,47 @@
 .arge_intro {
-    padding: 196px 0 176px;
+    padding: 196px 0 0;
+    margin-bottom: -30px;
     overflow: hidden;
     position: relative;
     .sec_title {
         h1 {
             margin-bottom: 60px;
         }
+        h4 {
+            font-weight: 600;
+            margin-bottom: 0 !important;
+            margin-top: 47px;
+            color: white;
+        }
         .opacity_text {
             color: var(--grey-300);
+        }
+    }
+    .slider {   
+        margin-top: 57px;
+        .swiper-slide {
+            width: 500px;
+        }
+        .image {
+            img {
+                border-radius: 30px;
+            }
+        }
+        .item {
+            position: relative;
+            h3 {
+                white-space: nowrap;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 50px;
+                font-weight: 700;
+                background: radial-gradient(35.14% 106.49% at 50% 50%, #fff 0%, rgba(255, 255, 255, 0.6) 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
         }
     }
     .bg_img {
@@ -46,10 +80,26 @@
 @media (max-width: 991px) {
     .arge_intro {
         padding: 167px 0;
+        .slider {
+            .swiper-slide {
+                width: 250px;
+                margin-right: 20px;
+            }
+            .image {
+                img{
+                    aspect-ratio: 25/20;
+                }
+            }
+            .item {
+                h3 {
+                    font-size: 24px;
+                }
+            }
+        }
         .bg_img {
             top: 0;
             bottom: 0;
-            img  {
+            img {
                 max-height: 100%;
             }
             &::after {
@@ -81,7 +131,7 @@
         position: relative;
         padding: 60px 0 80px;
         margin-bottom: 63px;
-        &::after {
+        .bg_img {
             content: "";
             position: absolute;
             left: 90px;
@@ -90,11 +140,13 @@
             right: 90px;
             max-width: 2250px;
             margin: 0 auto;
-            background-image: url(../images/image9.png);
-            background-position: center;
-            background-size: cover;
-            border-radius: 24px;
             z-index: -1;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 24px;
+            }
         }
         h1 {
             margin-bottom: 60px;
@@ -108,6 +160,7 @@
             border-radius: 20px;
             background-color: #d9d9d9;
             aspect-ratio: 30/54;
+            object-fit: cover;
         }
     }
     .slider_wrap {

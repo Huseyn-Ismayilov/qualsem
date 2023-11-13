@@ -2275,15 +2275,47 @@ button.swiper-pagination-bullet {
   }
 }
 .arge_intro {
-  padding: 196px 0 176px;
+  padding: 196px 0 0;
+  margin-bottom: -30px;
   overflow: hidden;
   position: relative;
 }
 .arge_intro .sec_title h1 {
   margin-bottom: 60px;
 }
+.arge_intro .sec_title h4 {
+  font-weight: 600;
+  margin-bottom: 0 !important;
+  margin-top: 47px;
+  color: white;
+}
 .arge_intro .sec_title .opacity_text {
   color: var(--grey-300);
+}
+.arge_intro .slider {
+  margin-top: 57px;
+}
+.arge_intro .slider .swiper-slide {
+  width: 500px;
+}
+.arge_intro .slider .image img {
+  border-radius: 30px;
+}
+.arge_intro .slider .item {
+  position: relative;
+}
+.arge_intro .slider .item h3 {
+  white-space: nowrap;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  font-weight: 700;
+  background: radial-gradient(35.14% 106.49% at 50% 50%, #fff 0%, rgba(255, 255, 255, 0.6) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .arge_intro .bg_img {
   position: absolute;
@@ -2319,6 +2351,16 @@ button.swiper-pagination-bullet {
   .arge_intro {
     padding: 167px 0;
   }
+  .arge_intro .slider .swiper-slide {
+    width: 250px;
+    margin-right: 20px;
+  }
+  .arge_intro .slider .image img {
+    aspect-ratio: 25/20;
+  }
+  .arge_intro .slider .item h3 {
+    font-size: 24px;
+  }
   .arge_intro .bg_img {
     top: 0;
     bottom: 0;
@@ -2352,7 +2394,7 @@ button.swiper-pagination-bullet {
   padding: 60px 0 80px;
   margin-bottom: 63px;
 }
-.arge_content_block .sec_title::after {
+.arge_content_block .sec_title .bg_img {
   content: "";
   position: absolute;
   left: 90px;
@@ -2361,11 +2403,14 @@ button.swiper-pagination-bullet {
   right: 90px;
   max-width: 2250px;
   margin: 0 auto;
-  background-image: url(../images/image9.png);
-  background-position: center;
-  background-size: cover;
-  border-radius: 24px;
   z-index: -1;
+}
+.arge_content_block .sec_title .bg_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 24px;
 }
 .arge_content_block .sec_title h1 {
   margin-bottom: 60px;
@@ -2377,6 +2422,8 @@ button.swiper-pagination-bullet {
   border-radius: 20px;
   background-color: #d9d9d9;
   aspect-ratio: 30/54;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .arge_content_block .slider_wrap {
   position: relative;
@@ -2516,10 +2563,12 @@ button.swiper-pagination-bullet {
   color: white;
 }
 .industry_intro > .container > .sec_title {
-  margin-bottom: -100px;
+  margin-bottom: -200px;
 }
 .industry_intro .image {
   margin-bottom: 0;
+  min-width: 170%;
+  margin-left: -100%;
 }
 
 .pagination .swiper-button-disabled {
