@@ -119,6 +119,10 @@
     .industry_intro {
         overflow: hidden;
         padding: 124px 0;
+        .image {
+            margin-left: 0;
+            min-width: auto;
+        }
         > .container {
             > .sec_title {
                 margin-bottom: 0;
@@ -159,6 +163,7 @@
         }
         .slider_wrap {
             overflow: visible;
+            padding: 0;
         }
     }
 }

@@ -158,6 +158,10 @@ new Swiper('.arge_content_block .slider', {
 	loop: true,
 	direction: "vertical",
 	slidesPerView: "auto",
+	autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+      },
 	breakpoints: {
 		// 640: {
 		// 	slidesPerView: 2,

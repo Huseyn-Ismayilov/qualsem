@@ -1405,6 +1405,7 @@ button.swiper-pagination-bullet {
 }
 .arge .items .item .image img {
   border-radius: 30px;
+  width: 100%;
 }
 .arge .items .item .content {
   width: 100%;
@@ -2581,6 +2582,10 @@ button.swiper-pagination-bullet {
     overflow: hidden;
     padding: 124px 0;
   }
+  .industry_intro .image {
+    margin-left: 0;
+    min-width: auto;
+  }
   .industry_intro > .container > .sec_title {
     margin-bottom: 0;
   }
@@ -2617,6 +2622,7 @@ button.swiper-pagination-bullet {
   }
   .industry_intro .slider_wrap {
     overflow: visible;
+    padding: 0;
   }
 }
 .not_found {
