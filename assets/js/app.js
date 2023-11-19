@@ -37,10 +37,6 @@ $(document).click(function (event) {
 
 
 
-$('.select_language .btn').click(function () {
-	$(this).toggleClass('active');
-	$(this).next().slideToggle()
-});
 
 
 // 
@@ -57,6 +53,7 @@ $(".productFeatures .slider").each(function () {
 	new Swiper(this, {
 		speed: 800,
 		loop: false,
+		effect: 'fade',
 		direction: 'horizontal',
 		pagination: {
 			el: this.querySelector(".productFeatures .swiper-pagination")
@@ -132,6 +129,7 @@ $(document).ready(function () {
 		$(".hero .icons").addClass("opened");
 		$(".hero .logo").slideDown()
 		$(".hero .content h3").slideDown()
+		$(".hero .category_items").addClass("opened");
 	}, 150);
 });
 
@@ -154,7 +152,7 @@ var medical_intro = new Swiper(".medical_intro .slider", {
 
 new Swiper('.arge_content_block .slider', {
 	spaceBetween: 20,
-	// centeredSlides: true,
+	centeredSlides: true,
 	loop: true,
 	direction: "vertical",
 	slidesPerView: "auto",
@@ -210,10 +208,25 @@ new Swiper('.arge_intro .slider', {
 	slidesPerView: "auto",
 	freeMode: true,
 	spaceBetween: 20,
-	loop: true,
+	loop: true, 
+	centeredSlides: true,
+
 	breakpoints: {
 		1024: {
 			spaceBetween: 50,
 		},
 	},
+});
+
+
+
+$('.select_language .btn').click(function () {
+	$(this).toggleClass('active');
+	$(this).next().slideToggle()
+});
+
+
+$('.language_select .btn').click(function () {
+	$(this).toggleClass('active');
+	$(this).next().slideToggle()
 });

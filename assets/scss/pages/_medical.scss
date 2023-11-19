@@ -4,6 +4,16 @@
     position: relative;
     .sec_title {
         margin-bottom: 300px;
+        position: relative;
+        .white_linear {
+            display: inline-block;
+        }
+        .image {
+            position: absolute;
+            left: 40%;
+            top: 50%;
+            transform: translateY(-30%);
+        }
     }
     .slider {
         .swiper-slide {
@@ -69,7 +79,6 @@
         aspect-ratio: 192/52;
         z-index: -1;
     }
-
 }
 
 
@@ -79,7 +88,12 @@
         background: linear-gradient(33deg, #121212 53.3%, #1f2422 100%);
         .sec_title {
             text-align: center;
-            margin-bottom: 94.737vw;
+            margin-bottom: 44vw;
+            .image {
+                position: static;
+                transform: unset;
+                margin-top: 40px;
+            }
         }
         &::after {
             top: 20%;

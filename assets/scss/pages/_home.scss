@@ -36,6 +36,9 @@
         .logo {
             display: none;
             margin-bottom: 52px;
+            img {
+                display: inline-block;
+            }
         }
         h3 {
             display: none;
@@ -78,7 +81,7 @@
             position: absolute;
             // transform: rotate(360deg);
             opacity: 0;
-            transition: .4s ease;
+            transition: 0.4s ease;
 
             img {
                 width: 100%;
@@ -127,9 +130,16 @@
         display: flex;
         justify-content: center;
         gap: 24px;
+        opacity: 0;
+        transform: translateY(60px);
+        transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         .btn {
             font-size: 20px;
             white-space: nowrap;
+        }
+        &.opened {
+            transform: translateY(0);
+            opacity: 1;
         }
     }
 }
@@ -162,8 +172,10 @@
             position: relative;
             z-index: 1;
             .logo {
-                max-width: 300px;
                 margin-bottom: 24px;
+                img {
+                    width: 300px;
+                }
             }
             .icon {
                 display: none;
@@ -257,6 +269,11 @@
             font-size: 32px;
             font-weight: 400;
             color: #808080;
+        }
+    }
+    .image {
+        img {
+            width: 100%;
         }
     }
 }
@@ -503,6 +520,13 @@
         padding-left: 130px;
         margin-left: -130px;
     }
+    .image {
+        width: 45%;
+    }
+    video {
+        width: 100%;
+        height: auto;
+    }
     .pagination {
         position: absolute;
         left: 0;
@@ -538,17 +562,33 @@
             align-items: center;
         }
         h3 {
+            opacity: 0;
             font-size: 48px;
             font-weight: 600;
             margin-bottom: 30px;
+            height: 0px;
+            transition: 0.5s;
             span {
                 color: #9d9d9d;
             }
         }
         p {
+            opacity: 0;
             font-size: 32px;
             font-weight: 400;
             color: #808080;
+            height: 0px;
+            transition: 0.5s;
+        }
+        .swiper-slide-active {
+            h3 {
+                height: 128px;
+                opacity: 1;
+            }
+            p {
+                height: 220px;
+                opacity: 1;
+            }
         }
         .swiper-counter {
             font-size: 48px;
@@ -566,9 +606,12 @@
         }
         .slider_wrap {
             max-width: 100%;
-            height: auto;
+            height: 360px;
             margin-left: 0;
             padding-left: 0;
+        }
+        .image {
+            width: 100%;
         }
         .pagination {
             margin-top: 78.947vw;
@@ -602,9 +645,13 @@
             h3 {
                 font-size: 24px;
                 font-weight: 600;
+                height: fit-content !important;
+                opacity: 1 !important;
             }
             p {
                 font-size: 16px;
+                height: fit-content !important;
+                opacity: 1 !important;
             }
         }
     }
@@ -873,6 +920,7 @@
 }
 @media (max-width: 991px) {
     .consultancy {
+        padding-top: 50px;
         &::before {
             top: -100px;
             left: 50%;

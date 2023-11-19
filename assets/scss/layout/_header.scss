@@ -18,6 +18,7 @@
         backdrop-filter: blur(16px);
         border-radius: 20px;
         padding: 24px 40px;
+        position: relative;
     }
     .site_logo {
         display: block;
@@ -45,6 +46,50 @@
                     color: white;
                 }
             }
+        }
+    }
+    .language_select {
+        position: absolute;
+        top: 0;
+        right: -270px;
+        width: fit-content;
+        .dropdown {
+            position: static;
+        }
+    }
+}
+.language_select {
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.116);
+    background: linear-gradient(180deg, rgba(44, 44, 44, 0) 0%, rgba(44, 44, 44, 0.5) 100%);
+    backdrop-filter: blur(16px);
+    .btn {
+        background: transparent;
+        cursor: pointer;
+        border-radius: unset;
+        border: unset;
+        padding: 24px 40px;
+        svg {
+            display: block;
+        }
+    }
+    .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        border-radius: 20px;
+        // border: 1px solid rgba(255, 255, 255, 0.116);
+        // background: linear-gradient(180deg, rgba(44, 44, 44, 0) 0%, rgba(44, 44, 44, 0.5) 100%);
+        // backdrop-filter: blur(16px);
+        width: 100%;
+        padding: 5px 0 15px;
+        text-align: center;
+        li {
+            display: block;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 500;
         }
     }
 }
@@ -122,6 +167,15 @@
     // transform: scale(0.7);
     // transform-origin: top center;
     transition: 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    .language_select {
+        width: fit-content;
+        margin: 0 auto;
+        background: transparent;
+        border: unset;
+        .btn {
+            justify-content: center;
+        }
+    }
     .navbar {
         text-align: center;
         .nav_item {
@@ -130,7 +184,7 @@
             }
         }
         .nav_link {
-            font-size: 40px;
+            font-size: 9vw;
             font-weight: 600;
             color: #707070;
             padding: 5px 28px;

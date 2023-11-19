@@ -905,6 +905,7 @@ button.swiper-pagination-bullet {
           backdrop-filter: blur(16px);
   border-radius: 20px;
   padding: 24px 40px;
+  position: relative;
 }
 .site_header .site_logo {
   display: block;
@@ -929,6 +930,50 @@ button.swiper-pagination-bullet {
 .site_header .navbar .nav_item.active .nav_link {
   font-weight: 700;
   color: white;
+}
+.site_header .language_select {
+  position: absolute;
+  top: 0;
+  right: -270px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.site_header .language_select .dropdown {
+  position: static;
+}
+
+.language_select {
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.116);
+  background: linear-gradient(180deg, rgba(44, 44, 44, 0) 0%, rgba(44, 44, 44, 0.5) 100%);
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+}
+.language_select .btn {
+  background: transparent;
+  cursor: pointer;
+  border-radius: unset;
+  border: unset;
+  padding: 24px 40px;
+}
+.language_select .btn svg {
+  display: block;
+}
+.language_select .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  border-radius: 20px;
+  width: 100%;
+  padding: 5px 0 15px;
+  text-align: center;
+}
+.language_select .dropdown li {
+  display: block;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .toggle {
@@ -995,6 +1040,16 @@ button.swiper-pagination-bullet {
   visibility: hidden;
   transition: 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+.mobile_menu .language_select {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  background: transparent;
+  border: unset;
+}
+.mobile_menu .language_select .btn {
+  justify-content: center;
+}
 .mobile_menu .navbar {
   text-align: center;
 }
@@ -1002,7 +1057,7 @@ button.swiper-pagination-bullet {
   margin-bottom: 16px;
 }
 .mobile_menu .navbar .nav_link {
-  font-size: 40px;
+  font-size: 9vw;
   font-weight: 600;
   color: #707070;
   padding: 5px 28px;
@@ -1051,7 +1106,6 @@ button.swiper-pagination-bullet {
 .site_footer .wrapper {
   flex-direction: column;
   align-items: center;
-  text-align: center;
   border-radius: 30px 30px 0px 0px;
   border: 1px solid #494949;
   border-bottom: unset;
@@ -1064,6 +1118,23 @@ button.swiper-pagination-bullet {
 .site_footer .title h5 {
   font-size: 24px;
   font-weight: 400;
+}
+.site_footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.site_footer .socialMedia {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 20px;
+}
+.site_footer .contact_info {
+  width: 50%;
+}
+.site_footer .contact_info:last-child {
+  text-align: right;
 }
 .site_footer .contact_info .item {
   padding: 10px 0;
@@ -1085,11 +1156,18 @@ button.swiper-pagination-bullet {
   .site_footer .title h5 {
     font-size: 20px;
   }
+  .site_footer .contact_info {
+    width: 100%;
+  }
   .site_footer .contact_info .item {
     padding: 5px 0;
   }
   .site_footer .contact_info .item p {
     font-size: 14px;
+  }
+  .site_footer .contact_info:last-child {
+    text-align: left;
+    margin-top: 20px;
   }
 }
 .hero {
@@ -1129,6 +1207,9 @@ button.swiper-pagination-bullet {
 .hero .content .logo {
   display: none;
   margin-bottom: 52px;
+}
+.hero .content .logo img {
+  display: inline-block;
 }
 .hero .content h3 {
   display: none;
@@ -1208,10 +1289,17 @@ button.swiper-pagination-bullet {
   display: flex;
   justify-content: center;
   gap: 24px;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .hero .category_items .btn {
   font-size: 20px;
   white-space: nowrap;
+}
+.hero .category_items.opened {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 @media (max-width: 992px) {
@@ -1244,8 +1332,10 @@ button.swiper-pagination-bullet {
     z-index: 1;
   }
   .hero .content .logo {
-    max-width: 300px;
     margin-bottom: 24px;
+  }
+  .hero .content .logo img {
+    width: 300px;
   }
   .hero .content .icon {
     display: none;
@@ -1325,6 +1415,9 @@ button.swiper-pagination-bullet {
   font-size: 32px;
   font-weight: 400;
   color: #808080;
+}
+.medical .image img {
+  width: 100%;
 }
 
 @media (max-width: 992px) {
@@ -1536,6 +1629,13 @@ button.swiper-pagination-bullet {
   padding-left: 130px;
   margin-left: -130px;
 }
+.productFeatures .image {
+  width: 45%;
+}
+.productFeatures video {
+  width: 100%;
+  height: auto;
+}
 .productFeatures .pagination {
   position: absolute;
   left: 0;
@@ -1570,17 +1670,31 @@ button.swiper-pagination-bullet {
   align-items: center;
 }
 .productFeatures .slider h3 {
+  opacity: 0;
   font-size: 48px;
   font-weight: 600;
   margin-bottom: 30px;
+  height: 0px;
+  transition: 0.5s;
 }
 .productFeatures .slider h3 span {
   color: #9d9d9d;
 }
 .productFeatures .slider p {
+  opacity: 0;
   font-size: 32px;
   font-weight: 400;
   color: #808080;
+  height: 0px;
+  transition: 0.5s;
+}
+.productFeatures .slider .swiper-slide-active h3 {
+  height: 128px;
+  opacity: 1;
+}
+.productFeatures .slider .swiper-slide-active p {
+  height: 220px;
+  opacity: 1;
 }
 .productFeatures .slider .swiper-counter {
   font-size: 48px;
@@ -1598,9 +1712,12 @@ button.swiper-pagination-bullet {
   }
   .productFeatures .slider_wrap {
     max-width: 100%;
-    height: auto;
+    height: 360px;
     margin-left: 0;
     padding-left: 0;
+  }
+  .productFeatures .image {
+    width: 100%;
   }
   .productFeatures .pagination {
     margin-top: 78.947vw;
@@ -1635,9 +1752,15 @@ button.swiper-pagination-bullet {
   .productFeatures .slider h3 {
     font-size: 24px;
     font-weight: 600;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    opacity: 1 !important;
   }
   .productFeatures .slider p {
     font-size: 16px;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    opacity: 1 !important;
   }
 }
 .industry {
@@ -1872,6 +1995,9 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 991px) {
+  .consultancy {
+    padding-top: 50px;
+  }
   .consultancy::before {
     top: -100px;
     left: 50%;
@@ -1985,6 +2111,16 @@ button.swiper-pagination-bullet {
 }
 .medical_intro .sec_title {
   margin-bottom: 300px;
+  position: relative;
+}
+.medical_intro .sec_title .white_linear {
+  display: inline-block;
+}
+.medical_intro .sec_title .image {
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  transform: translateY(-30%);
 }
 .medical_intro .slider .swiper-slide {
   width: 575px;
@@ -2051,7 +2187,12 @@ button.swiper-pagination-bullet {
   }
   .medical_intro .sec_title {
     text-align: center;
-    margin-bottom: 94.737vw;
+    margin-bottom: 44vw;
+  }
+  .medical_intro .sec_title .image {
+    position: static;
+    transform: unset;
+    margin-top: 40px;
   }
   .medical_intro::after {
     top: 20%;
