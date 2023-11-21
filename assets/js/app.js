@@ -16,6 +16,13 @@ $('.site_header .toggle, .mobile_menu .close_btn').click(function () {
 	$('.site_header .toggle').toggleClass('opened')
 });
 
+
+$('.mobile_menu .nav_link').click(function () {
+	$('.mobile_menu').removeClass('opened');
+	$('body').removeClass('overflow_hidden');
+	$('.site_header .toggle').removeClass('opened')
+});
+
 $('.mobile_menu .menu .dropdown .nav_link').click(function (e) {
 	$(this).next().toggleClass('opened');
 	return false;
