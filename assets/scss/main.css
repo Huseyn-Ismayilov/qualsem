@@ -1337,12 +1337,15 @@ button.swiper-pagination-bullet {
   .hero .content .logo img {
     width: 300px;
   }
-  .hero .content .icon {
+  .hero .content .icons .icon {
     max-width: 20%;
   }
-  .hero .content .icon img {
+  .hero .content .icons .icon img {
     width: 100%;
     max-width: 100%;
+  }
+  .hero .content .icons.opened .icon5 {
+    top: 56%;
   }
   .hero .category_items {
     flex-wrap: wrap;

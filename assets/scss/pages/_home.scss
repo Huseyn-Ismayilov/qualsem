@@ -153,7 +153,7 @@
         .wrapper {
             position: relative;
             height: auto;
-            padding: 34vw 0 ;
+            padding: 34vw 0;
             &::before {
                 content: "";
                 left: 50%;
@@ -177,12 +177,19 @@
                     width: 300px;
                 }
             }
-            .icon {
-                // display: none;
-                max-width: 20%;
-                img {
-                    width: 100%;
-                    max-width: 100%;
+            .icons {
+                .icon {
+                    // display: none;
+                    max-width: 20%;
+                    img {
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                }
+                &.opened {
+                    .icon5 {
+                        top: 56%;
+                    }
                 }
             }
         }
